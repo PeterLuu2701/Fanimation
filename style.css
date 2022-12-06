@@ -12,10 +12,12 @@ html, body {
 }
 .navbar li a {
     color: white !important;
+	padding: 5px 5px 5px 5px;
 }
 .navbar li a:hover {
     color:gray !important;
 }
+
 
 .carousel-inner img {
 	width: 100%;
