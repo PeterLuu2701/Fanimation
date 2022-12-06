@@ -152,7 +152,7 @@ header .navigation .menu{
     display: none;
 }
 
-#footer a {
+footer a {
     color: #fff !important ;
     text-decoration: none;
 }
