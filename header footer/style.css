@@ -229,7 +229,7 @@ footer a {
     }
 
     .menu-item .sub-menu .sub-item a:hover{
-        color: #4080EF;
+        color:grey;
         transition: 0.3s;
     }
 
