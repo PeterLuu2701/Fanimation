@@ -1,5 +1,250 @@
+/* FROM HEADER FOOTER */
 @import url('http://fonts.googleapis.com/css?family=open+sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
 
+section{
+    padding: 20px 100px;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(83,40,79);
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    padding: 0 100px;
+    transition: 0.6s;
+}
+
+header .navigation{
+    position: relative;
+    line-height: 75px;
+}
+
+header .navigation .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    user-select: none;
+}
+
+.menu .searchbar{
+    position: relative;
+}
+
+.menu .searchbar input[type="text"]{
+    border: 0;
+    padding: 0 10px;
+    width: 250px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.menu .searchbar .icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background:none;
+    width: 35px;
+    height: 100%;
+    border-radius: 3px;
+    color: #23252B;
+
+}
+
+.menu .searchbar .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+
+.menu-item > a{
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 20px;
+    padding: 25px 0;
+}
+
+.menu-item >a:hover{
+    color: grey;
+    transition: 0.3s;
+}
+
+.menu-item .sub-menu{
+    position: absolute;
+    background: #23252B;
+    top: 74px;
+    line-height: 40px;
+    list-style: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    pointer-events: none;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.menu-item:hover .sub-menu{
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+    
+}
+
+.menu-item .sub-menu .sub-item{
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item .sub-menu .sub-item a{
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+
+.menu-item .sub-menu .sub-item:hover{
+    background: rgba(83,40,79);
+}
+
+.menu-item .sub-menu .sub-item:last-child:hover{
+    border-radius: 0 0 8px 8px;
+}
+
+
+.menu-btn{
+    display: none;
+}
+
+footer a {
+    color: #fff !important ;
+    text-decoration: none;
+}
+
+
+.top-footer {
+    background: #53284f;
+}
+
+.ticker {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 10px;
+    margin: 0 auto;
+}
+
+.news {
+    width: 100%;
+    background: #53284f;
+    padding: 0 2%;
+    padding-top: 20px;
+}
+
+.news marquee {
+    font-size: 15px;
+}
+
+@media (max-width: 1060px){
+    header .navigation .menu{
+        position: fixed;
+        display: block;
+        background: #23252B;
+        min-width: 350px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 90px 50px;
+        visibility: hidden;
+        overflow-y: auto;
+        transition: 0.5s;
+        transition-property: right, visibility;
+    }
+
+    header .navigation .menu.active{
+        right: 0;
+        visibility: visible;
+    }
+    .menu-item{
+        position: relative;
+    }
+
+    .menu-item .sub-menu{
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transform: translateX(10px);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        display: none;
+    }
+
+    .menu-item:hover .sub-menu{
+        transform: translateX(10px);
+    }
+
+    .menu-item .sub-menu .sub-item{
+        box-shadow: none;
+    }
+
+    .menu-item .sub-menu .sub-item:hover{
+        background: none;
+    }
+
+    .menu-item .sub-menu .sub-item a:hover{
+        color:grey;
+        transition: 0.3s;
+    }
+
+    .close-btn{
+        position: absolute;
+        background: url(../Fanimation/img/close.png)no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-position: center;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        cursor: pointer;
+    }
+
+    .menu-btn{
+        background: url(../Fanimation/img/menu.png)no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 30px;
+        background-position: center;
+        cursor: pointer;
+        display: block;
+    }
+
+    header{
+        padding: 15px 20px;
+
+    }
+}
+
+/* FROM INDEX HOMEPAGE */
 html, body {
     width: 100%;
     height: 100%;
@@ -35,62 +280,23 @@ html, body {
 	font-size: 200%;	
 	text-shadow: 2px 2px 10px #000;
 }
+.bg-appointment {
+	background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../Fanimation/img/2.jpg), no-repeat center center;
+	background-size: cover;
+}
+.bg-action {
+	background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../Fanimation/img/FMMAD8531BN_Alt_Image_1.jpg), no-repeat center center;
+	background-size: cover;
+}
+
+
+  
 .jumbotron {
+	background-color: rgba(62,44,100, 0.6) !important;
 	padding: 1rem;
 	border-radius: 0;
 }
-.welcome hr {
-	border-top: 2px solid rgba(62,44,100, 0.6);
-	width: 95%;	
-	margin-bottom: 2rem;
-}
-.fa-react {
-	color: #81D8F7;
-}
-.fa-angular {
-	color: rgb(177,43,55);
-}
-.fa-css3 {
-	color: #D76537;
-}
-.fa-react, .fa-angular, .fa-css3 {
-	font-size: 4em;
-	margin: 1rem;
-}
-.fun {
-	width: 100%;
-}
-.social a {
-	font-size: 3em;/*1em = 16px*/
-	padding: 3rem;/*1rem = 1 "font-size" */
-}
-.fa-facebook {
-	color: #3b5998;
-}
-.fa-twitter {
-	color: #00aced;	
-}
-.fa-google-plus-g {
-	color: #dd4b39;
-}
-.fa-instagram {
-	color: #517fa4;
-}
-.fa-youtube {
-	color: #bb0000;
-}
-footer {
-	background-color: #3f3f3f;
-	color: #d5d5d5;
-}
-hr.light {
-	border-top: 1px solid #d5d5d5;
-	width: 75%;
-}
-.light-100 {
-	border-top: 1px solid #d5d5d5;
-	width: 100%;
-}
+
 /*Media Query*/
 @media (max-width: 992px){
 	.carousel-caption {
@@ -104,6 +310,14 @@ hr.light {
 	}
 	.carousel-caption .btn{		
 		font-size: 120%;		
+	}
+	.bg-appointment {
+		background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../Fanimation/img/2.jpg), no-repeat center center;
+		background-size: cover;
+	}
+	.bg-action {
+		background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../Fanimation/img/FMMAD8531BN_Alt_Image_1.jpg), no-repeat center center;
+		background-size: cover;
 	}
 }
 @media (max-width: 768px){	
