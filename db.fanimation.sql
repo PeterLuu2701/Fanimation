@@ -1,3 +1,5 @@
+
+
 CREATE Database `fanimation`
 
 CREATE TABLE Category (
