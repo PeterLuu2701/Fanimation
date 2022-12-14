@@ -262,8 +262,6 @@ html, body {
 .navbar li a:hover {
     color:gray !important;
 }
-
-
 .carousel-inner img {
 	width: 100%;
 }
@@ -343,7 +341,7 @@ html, body {
 	.carousel-caption h1{
 		font-size: 150%;
 	}
-	.carousel-caption h3{		
+	.carousel-caption h3{	
 		font-size: 110%;		
 	}
 	.carousel-caption .btn {		
