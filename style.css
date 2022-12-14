@@ -264,8 +264,9 @@ html, body {
 }
 
 
-.carousel-inner img {
+.carousel-item img {
 	width: 100%;
+    height: 90%;
 }
 .carousel-caption {
 	position: absolute;
