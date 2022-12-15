@@ -144,6 +144,12 @@ header .navigation .menu{
     padding-bottom: 50px;
 }
 /* FOOTER START*/
+.contact-fanimation{
+    padding-left: 100px;
+}
+.contact{
+    padding-right: 100px;
+}
 /* FROM HEADER FOOTER */
 @import url('http://fonts.googleapis.com/css?family=open+sans');
 *{
@@ -160,7 +166,6 @@ section{
 header{
     z-index: 999;
     position: fixed;
-
     top: 0;
     left: 0;
     width: 100%;
@@ -410,6 +415,7 @@ footer a {
     font-size: 25px;
     padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .triaire_text{
@@ -449,4 +455,12 @@ footer a {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-/* CONTENT START */
+
+/* CONTENT END */
+
+/* GALLERY STAR */
+.gallery{
+    margin-top: 5px;
+}
+
+/* GALLERY END */
