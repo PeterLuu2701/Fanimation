@@ -144,6 +144,12 @@ header .navigation .menu{
     padding-bottom: 50px;
 }
 /* FOOTER START*/
+.contact-fanimation{
+    padding-left: 100px;
+}
+.contact{
+    padding-right: 100px;
+}
 /* FROM HEADER FOOTER */
 @import url('http://fonts.googleapis.com/css?family=open+sans');
 *{
@@ -160,7 +166,6 @@ section{
 header{
     z-index: 999;
     position: fixed;
-
     top: 0;
     left: 0;
     width: 100%;
@@ -410,6 +415,7 @@ footer a {
     font-size: 25px;
     padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .triaire_text{
@@ -441,7 +447,7 @@ footer a {
     float: left;
     position: relative;
     margin-right: 20px;
-    text-align: center;
+    align-items: center;
     font-size: 15px;
     margin-top: 10px;
 }
@@ -449,4 +455,172 @@ footer a {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-/* CONTENT START */
+
+/* CONTENT END */
+
+/* GALLERY STAR */
+.gallery{
+    margin-top: 5px;
+}
+/* GALLERY END */
+/* PRODUCTS */
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+  
+  }
+  .product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    margin-right: -150%;
+    height: 200%;width:200%;
+  }
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    padding-bottom: 5px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .card-btn:hover {
+    background: #ff7d7d;
+    color: #fff;
+  }
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+
+/* GALLERY END */
+/* RATING START */
+.stars {
+    padding-top: 5px;
+    width: 420px;
+    height: 80px;
+    text-align:center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+ }
+ 
+ .stars .star {
+    width: 84px;
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    color: #53284f;
+    text-shadow: 1px 2px 4px #a28aa0;
+    padding: 0 5px;
+ }
+ 
+ .stars-ghost {
+    width: 0px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+ }
+ 
+ .stars .star:nth-child(1) {
+    left: 0;
+ }
+ 
+ .stars .star:nth-child(2) {
+    left: 84px;
+ }
+ 
+ .stars .star:nth-child(3) {
+    left: 168px;
+ }
+ 
+ .stars .star:nth-child(4) {
+    left: 252px;
+ }
+ 
+ .stars .star:nth-child(5) {
+    left: 336px;
+ }
+ 
+ body {
+    background: #fff;
+ }
+ 
+ .info {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Consolas";
+    position: absolute;
+    top: -80px;
+ }
+ 
+ body,
+ html {
+    overflow: hidden;
+ }
+ 
+ *,
+ *:after,
+ *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+ }
+/* RATING END */
