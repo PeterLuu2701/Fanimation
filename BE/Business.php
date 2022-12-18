@@ -45,14 +45,13 @@ function register($user, $pass, $acc){
     connect_db();
 
     // Chống SQL Injection
-    $user = addslashes($user);
-    $acc = addslashes($acc);
-    $pass = addslashes($pass);
+    $username = addslashes($user);
+    $password = addslashes($pass);
   
     // Truy vấn 
     $sql = "
-            INSERT INTO user(user, pass, acc) VALUES
-            ('$user', '$pass', '$acc')
+            INSERT INTO user_info ( Username, Pass_word) VALUES
+            ( '$username', '$password')
             ";
 //  echo $sql;
     // Thực hiện câu truy vấn
@@ -76,7 +75,7 @@ function login($userLogin, $passLogin){
   
     // Truy vấn 
     $sql = "
-            SELECT * FROM user WHERE user = '$userLogin' AND pass = '$passLogin'
+            SELECT * FROM user_info WHERE Username = '$userLogin' AND Pass_word = '$passLogin'
             ";
 //  echo $sql;
     // Thực hiện câu truy vấn

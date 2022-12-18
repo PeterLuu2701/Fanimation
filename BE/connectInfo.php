@@ -2,7 +2,7 @@
 define('servername', 'localhost');
 define('username', 'root');
 define('password', '');
-define('dbname', 'qlbds');
+define('dbname', 'fanimation');
 
 // echo servername;
 ?>
