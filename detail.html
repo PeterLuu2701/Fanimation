@@ -68,14 +68,47 @@
                             <img src="./img/223.jpg" style="height: 70%;width:100%">
                         </div>
                         <div class="gallery">
-                            <img src="./img/223.jpg" style="height: 20%;width:20%">
-                            <img src="./img/223.jpg" style="height: 20%;width:20%">
-                            <img src="./img/223.jpg" style="height: 20%;width:20%">
-                            <img src="./img/223.jpg" style="height: 20%;width:20%">
+                            <section class="product"> 
+                                <button class=" pre-btn"><img src="image/arrow.png" alt=""></button>
+                                <button class=" nxt-btn"><img src="image/arrow.png" alt=""></button>
+                                <div class="product-container">
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                    <div class="product-card">
+                                        <img src="https://fanimation.com/wp-content/uploads/2019/12/triaire_mad8514.jpg" style="height: 20%;width:20%">
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                     <div class ="container1right col-md-6 col-sm-6 bg-light">
-                        <h1>Klinch 44</h1>
+                        <div class="detail-product">
+                            <h1>Klinch 44</h1>
                         <ul>
                             <li>Damp Rated</li>
                             <li>44″ Sweep Blades Included</li>
@@ -84,8 +117,24 @@
                         </ul>
                         <label class="labeldetail">FINISH: <img class="change_color" src="https://fanimation.com/wp-content/uploads/2019/12/BL.jpg" style="height: 50px;width:40px" href=""> <img class="change_color" src="https://fanimation.com/wp-content/uploads/2019/12/DZ.jpg" style="height: 50px;width:40px" href=""> <img class="change_color" src="https://fanimation.com/wp-content/uploads/2019/12/GR.jpg" style="height: 50px;width:40px" href=""> <img class="change_color" src="https://fanimation.com/wp-content/uploads/2019/12/MW.jpg" style="height: 50px;width:40px" href=""> <img class="change_color" src="https://fanimation.com/wp-content/uploads/2019/12/SL.jpg" style="height: 50px;width:40px" href=""></label> </br>
                         <label class="labeldetail1">SKU: <span>MAD8514-48</span></label></br>
-                        <label class="labeldetail1">CATEGORIES: <span>FANS, MIX & MATCH, WET RATED</span></label></br>
-                        <label class="labeldetail1">RATING: <span class="ti-star"></span><span class="ti-star"></span><span class="ti-star"></span><span class="ti-star"></span><span class="ti-star"></span></label>
+                        <label class="labeldetail1">CATEGORIES: <span>FANS, MIX & MATCH, WET RATED</span></label>
+                        </div>
+                        <div class="stars">
+                            <h6>RATING:</h6>
+                            <div class="stars-ghost">
+                                <div class="star"><i class="fa fa-star"></i></div>
+                                <div class="star"><i class="fa fa-star"></i></div>
+                                <div class="star"><i class="fa fa-star"></i></div>
+                                <div class="star"><i class="fa fa-star"></i></div>
+                                <div class="star"><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="star"><i class="fa fa-star-o"></i></div>
+                                <div class="star"><i class="fa fa-star-o"></i></div>
+                                <div class="star"><i class="fa fa-star-o"></i></div>
+                                <div class="star"><i class="fa fa-star-o"></i></div>
+                                <div class="star"><i class="fa fa-star-o"></i></div>
+                        </div>
+
                     </div>
                 </div>
                 <div class= "row">
@@ -378,6 +427,32 @@
             menu.classList.remove("active");
             });
         </script>
+         <script>
+                    const productContainers = [...document.querySelectorAll('.product-container')];
+            const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+            const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+            productContainers.forEach((item, i) => {
+                let containerDimensions = item.getBoundingClientRect();
+                let containerWidth = containerDimensions.width;
+
+                nxtBtn[i].addEventListener('click', () => {
+                    item.scrollLeft += containerWidth;
+                })
+
+                preBtn[i].addEventListener('click', () => {
+                    item.scrollLeft -= containerWidth;
+                })
+            })
+        </script>
+        <script>
+            $(".stars").mousemove(function(e) {
+            var gLeft = $(".stars .stars-ghost").offset().left,
+                pX = e.pageX;
+            $(".stars .stars-ghost").width(pX - gLeft);
+            });
+        </script>
+
     </body>
 </html>
 
