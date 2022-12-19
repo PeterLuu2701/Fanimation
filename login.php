@@ -14,18 +14,19 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="login.html" class="sign-in-form" method="post" enctype="multipart/form-data">
             <img src="./img/logo.png" width="200px" alt="">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" name="userLogin"/>
+              <?php if (!empty($errors['userLogin'])) echo $errors['userLogin']; ?>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" name="passLogin"/>
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <button type="submit" name="Login" class="btn solid">Login</button>
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">

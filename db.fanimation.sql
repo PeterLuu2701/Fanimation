@@ -30,7 +30,6 @@ CREATE TABLE Products (
  FOREIGN KEY (SKU) REFERENCES Category(SKU)
 );
 
-
 CREATE TABLE User_Info (
  User_ID int NOT NULL AUTO_INCREMENT,
  Username varchar(50) NOT NULL,
