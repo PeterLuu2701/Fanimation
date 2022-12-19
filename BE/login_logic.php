@@ -71,6 +71,8 @@ if (!$errors) {
 	$_SESSION['username'] = $data['userLogin'];
 	setcookie("success", "Đăng nhập thành công!", time()+1, "/","", 0);
     echo '<script>alert("Đăng nhập thành công!")</script>';
+    $_SESSION["loged"] = "true";
+    session_start();
     // header("location: index.php");
 }
 
