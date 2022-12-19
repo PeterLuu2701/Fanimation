@@ -37,9 +37,11 @@ CREATE TABLE User_Info (
  PRIMARY KEY (User_ID)
 );
 
-CREATE TABLE User_Address (
+CREATE TABLE Rating (
+    Rating_ID int NOT NULL AUTO_INCREMENT,
     User_ID int NOT NULL AUTO_INCREMENT,
 	SKU varchar(50) NOT NULL,
+    Rating_point varchar(50) NOT NULL,
 	Username varchar(50) NOT NULL,
 	Email varchar(50) NOT NULL,
 	Address varchar(250) NULL,
