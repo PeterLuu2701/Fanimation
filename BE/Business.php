@@ -6,7 +6,7 @@ global $conn;
 // Hàm kết nối database
 function connect_db()
 {
-    require_once "./libs/connectInfo.php";
+    require_once "connectInfo.php";
     // echo servername;
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -87,7 +87,7 @@ function login($userLogin, $passLogin){
         // $_SESSION['username'] = $userLogin;
         header("location: index.php");
     }else{
-				header("location:init.php");
+				header("location:login.php");
 				setcookie("error", "Đăng nhập không thành công!", time()+1, "/","", 0);
 			}
     // return $query;
