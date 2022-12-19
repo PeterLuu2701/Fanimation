@@ -1,7 +1,7 @@
 <?php
-// echo "hhhhh";
-require './Business.php';
-// var_dump($_POST);
+echo "hhhhh";
+require './BE/Business.php';
+var_dump($_POST);
 
 if(!empty($_POST["register"])){
 	// echo "hhhhh121212";
@@ -61,7 +61,7 @@ if(empty($data['passLogin'])){
 
 
 if ($errors){
-   setcookie("error", "Đăng ký không thành công!", time()+1, "/","", 0);
+   setcookie("error", "Đăng nhập không thành công!", time()+1, "/","", 0);
    echo '<script>alert("Đăng nhập không thành công!")</script>';
 }
 
@@ -71,6 +71,7 @@ if (!$errors) {
 	$_SESSION['username'] = $data['userLogin'];
 	setcookie("success", "Đăng nhập thành công!", time()+1, "/","", 0);
     echo '<script>alert("Đăng nhập thành công!")</script>';
+    // header("location: index.php");
 }
 
 disconnect_db();

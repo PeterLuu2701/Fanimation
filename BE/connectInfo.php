@@ -4,5 +4,5 @@ define('username', 'root');
 define('password', '');
 define('dbname', 'fanimation');
 
-// echo servername;
+echo servername;
 ?>
