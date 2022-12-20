@@ -25,6 +25,7 @@ CREATE TABLE Products (
  Motor_Size varchar(50) NULL,
  Motor_Type varchar(50) NULL,
  Number_of_Blades varchar(50) NULL,
+ image varchar(250) NOT NULL,
  PRIMARY KEY (id),
  CONSTRAINT fk_SKU
  FOREIGN KEY (SKU) REFERENCES Category(SKU)
