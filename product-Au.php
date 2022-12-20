@@ -19,7 +19,7 @@
     <body>
         <div class="main col-xs-12">
             <header class="header">
-                <a href="index.html" class="logo">
+                <a href="index.php" class="logo">
                 <img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
                 </a>
                 <div class="navigation">
@@ -64,7 +64,7 @@
             <div class="header-background">
                 <div class="header-content">
                   <h1>Products</h1>
-                  <h5 ><a href="index.html">Home / Products</a></h5>
+                  <h5 ><a href="index.php">Home / Products</a></h5>
                 </div>
             </div>
             <div class="container">
@@ -120,7 +120,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -131,7 +131,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -142,7 +142,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -153,7 +153,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -177,7 +177,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -188,7 +188,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -199,7 +199,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                 </div>
@@ -212,7 +212,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -223,7 +223,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -234,7 +234,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -245,7 +245,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -269,7 +269,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -280,7 +280,7 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
                     <div class="product-item col-md-3 col-sm-6">
@@ -291,9 +291,10 @@
                             <a href="" class="show-more" data-toggle="modal" data-target="#myModal">Show more</a>
                         </div>
                         <div class="product-info">
-                            <a href="detail.html" class="product-name">Amped</a>
+                            <a href="detail.php" class="product-name">Amped</a>
                         </div>
                     </div>
+                </div>
                     <!-- The Modal -->
                     <div class="modal" id="myModal">
                         <div class="modal-dialog modal-lg modal-xl">

@@ -19,7 +19,7 @@
 <body>
 <!-- HEADER -->
 <header>
-	<a href="index.html" class="logo">
+	<a href="index.php" class="logo">
 		<img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
 	</a>
 	<div class="navigation">
@@ -34,29 +34,29 @@
 
 			<div class="close-btn"></div>
 			<li class="menu-item">
-				<a class="sub-btn" href="product.html">Products
+				<a class="sub-btn" href="product-Au.php">Products
 					<i class="fas fa-angle-down"></i>
 				</a>
 				<ul class="sub-menu">
-					<li class="sub-item"><a href="product.html">All Products</a></li>
-					<li class="sub-item"><a href="product.html">Damp Rated Fans</a></li>
-					<li class="sub-item"><a href="product.html">Wet Rated Fans</a></li>
-					<li class="sub-item"><a href="product.html">Dry Rated Fans</a></li>
+					<li class="sub-item"><a href="product-Au.php">All Products</a></li>
+					<li class="sub-item"><a href="product-Au.php">Damp Rated Fans</a></li>
+					<li class="sub-item"><a href="product-Au.php">Wet Rated Fans</a></li>
+					<li class="sub-item"><a href="product-Au.php">Dry Rated Fans</a></li>
 				</ul>
 			</li>           
 
 			<li class="menu-item">
-				<a class="sub-btn" href="contact.html">Help Center
+				<a class="sub-btn" href="contact.php">Help Center
 					<i class="fas fa-angle-down"></i>
 				</a>
 				<ul class="sub-menu">
-					<li class="sub-item"><a href="product_registration.html">Product Registration</a></li>
-					<li class="sub-item"><a href="contact.html">Contact</a></li>
-					<li class="sub-item"><a href="explore.html">Choosing a Fan</a></li>
+					<li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
+					<li class="sub-item"><a href="contact.php">Contact</a></li>
+					<li class="sub-item"><a href="explore.php">Choosing a Fan</a></li>
 				</ul>
 			</li>
-			<li class="menu-item"><a href="aboutus.html">About</a></li>
-			<li class="menu-item"><a href="login.html"><i class="far fa-user mr-2"></i>Login</a></li>
+			<li class="menu-item"><a href="aboutus.php">About</a></li>
+			<li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
 		</ul>
 	</div>
 	<div class="menu-btn"></div>
@@ -192,7 +192,7 @@
 
 <!-- Action Start -->
 <div class="container-fluid ">
-	<div class="container ">
+	<div class="container">
 		<div class="bg-action rounded" style="height: 500px;">
 			<div class="row h-100 align-items-center justify-content-center">
 				<div class="col-lg-6 py-5 text-center">
@@ -215,10 +215,10 @@
 			<div class="row h-100 align-items-center justify-content-center">
 				<div class="row">
 					<div class="col-lg-6 py-5">
-						<a href="product.html"><img src="img/showroomcollection2018_hover.jpg" style="width:100%"></a>
+						<a href="product-Au.php"><img src="img/showroomcollection2018_hover.jpg" style="width:100%"></a>
 					</div>
 					<div class="col-lg-6 py-5">                            
-						<a href="product.html"><img src="img/banner-fanimation-studio1_hover.jpg" style="width:100%"></a>
+						<a href="product-Au.php"><img src="img/banner-fanimation-studio1_hover.jpg" style="width:100%"></a>
 					</div>
 				</div>                          
 			</div> 

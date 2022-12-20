@@ -19,7 +19,7 @@
     <body>
         <div class="main col-xs-12">
             <header class="header">
-                <a href="index.html" class="logo">
+                <a href="index.php" class="logo">
                 <img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
                 </a>
                 <div class="navigation">
@@ -37,7 +37,7 @@
                             <i class="fas fa-angle-down"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li class="sub-item"><a href="product.html">All Products</a></li>
+                                <li class="sub-item"><a href="product-Au.php">All Products</a></li>
                                 <li class="sub-item"><a href="#">Damp Rated Fans</a></li>
                                 <li class="sub-item"><a href="#">Wet Rated Fans</a></li>
                                 <li class="sub-item"><a href="#">Dry Rated Fans</a></li>
@@ -55,8 +55,8 @@
                                 <li class="sub-item"><a href="#">General Inquiries</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="aboutus.html">About</a></li>
-                        <li class="menu-item"><a href="login.html"><i class="far fa-user mr-2"></i>Login</a></li>
+                        <li class="menu-item"><a href="aboutus.php">About</a></li>
+                        <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
                     </ul>
                 </div>
                 <div class="menu-btn"></div>
