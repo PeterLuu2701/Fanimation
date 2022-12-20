@@ -18,9 +18,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  	<!-- HEADER -->
 	<header>
-		<a href="index.html" class="logo">
+		<a href="index.php" class="logo">
 			<img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
 		</a>
 		<div class="navigation">
@@ -35,29 +35,29 @@
 
 				<div class="close-btn"></div>
 				<li class="menu-item">
-					<a class="sub-btn" href="product.html">Products
+					<a class="sub-btn" href="product-Au.php">Products
 						<i class="fas fa-angle-down"></i>
 					</a>
 					<ul class="sub-menu">
-						<li class="sub-item"><a href="../product.html">All Products</a></li>
-						<li class="sub-item"><a href="../product.html">Damp Rated Fans</a></li>
-						<li class="sub-item"><a href="../product.html">Wet Rated Fans</a></li>
-						<li class="sub-item"><a href="../product.html">Dry Rated Fans</a></li>
+						<li class="sub-item"><a href="product-Au.php">All Products</a></li>
+						<li class="sub-item"><a href="product-Au.php">Damp Rated Fans</a></li>
+						<li class="sub-item"><a href="product-Au.php">Wet Rated Fans</a></li>
+						<li class="sub-item"><a href="product-Au.php">Dry Rated Fans</a></li>
 					</ul>
 				</li>           
 
 				<li class="menu-item">
-					<a class="sub-btn" href="contact.html">Help Center
+					<a class="sub-btn" href="contact.php">Help Center
 						<i class="fas fa-angle-down"></i>
 					</a>
 					<ul class="sub-menu">
-						<li class="sub-item"><a href="../product_registration.html">Product Registration</a></li>
-						<li class="sub-item"><a href="../contact.html">Contact</a></li>
-						<li class="sub-item"><a href="../explore.html">Choosing a Fan</a></li>
+						<li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
+						<li class="sub-item"><a href="contact.php">Contact</a></li>
+						<li class="sub-item"><a href="choosingAFan.php">Choosing a Fan</a></li>
 					</ul>
 				</li>
-				<li class="menu-item"><a href="../aboutus.html">About</a></li>
-				<li class="menu-item"><a href="../login.html"><i class="far fa-user mr-2"></i>Login</a></li>
+				<li class="menu-item"><a href="aboutus.php">About</a></li>
+				<li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
 			</ul>
 		</div>
 		<div class="menu-btn"></div>
@@ -132,7 +132,7 @@
           our technical team, so that we can get back to you quickly.</p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-        <a href="#">
+        <a href="contact.php">
           <button type="button" class="btn btn-outline-dark">GET SUPPORT</button>
         </a>
       </div>
@@ -174,39 +174,35 @@
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.925932837542!2d-86.24890418512103!3d39.94304639223601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814aa9825faa5e1%3A0xe542c8f68a2cd493!2s10983%20Bennett%20Pkwy%20Ext%2C%20Zionsville%2C%20IN%2046077%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1669715711680!5m2!1svi!2s" width="800" height="310" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div> -->
-			</div>
-			
-				<div class="col-md-2 mx-auto mb-4">
-				<ul class="list-unstyled">
-					<li class="my-2"><a href="#">Home</a></li>
-					<li class="my-2"><a href="#">Blog</a></li>
-					<li class="my-2"><a href="#">Antique Fan</a></li>
-					<li class="my-2"><a href="#">Museum</a></li>
-					<li class="my-2"><a href="#">Contact</a></li>
-				</ul>
-			</div>
-
-				<div class="col-md-2 mx-auto mb-4">                  
-				<ul class="list-unstyled">
-					<li class="my-2"><a href="#">Products</a></li>
-					<li class="my-2"><a href="#">Product Catalog</a></li>
-					<li class="my-2"><a href="#">Choosing a Fan</a></li>
-					<li class="my-2"><a href="#">Special Offers</a></li>
-					<li class="my-2"><a href="#">Smart Controls</a></li>
-					<li class="my-2"><a href="#">Gear Store</a></li>
-				</ul>
-			</div>    
-
+			</div>			
 			<div class="col-md-2 mx-auto mb-4">
 				<ul class="list-unstyled">
-					<li class="my-2"><a href="#">Product Support</a></li>
-					<li class="my-2"><a href="#">Product Registration</a></li>
-					<li class="my-2"><a href="#">Find an Authorized Dealer</a></li>
-					<li class="my-2"><a href="#">Sales Agent Locator</a></li>
-					<li class="my-2"><a href="#">Dealer Portal</a></li>
+					<li class="my-2">Home</li>
+					<li class="my-2">Blog</li>
+					<li class="my-2">Antique Fan</li>
+					<li class="my-2">Museum</li>
+					<li class="my-2">Contact</li>
 				</ul>
 			</div>
-
+			<div class="col-md-2 mx-auto mb-4">                  
+				<ul class="list-unstyled">
+					<li class="my-2">Products</li>
+					<li class="my-2">Product Catalog</li>
+					<li class="my-2">Choosing a Fan</li>
+					<li class="my-2">Special Offers</li>
+					<li class="my-2">Smart Controls</li>
+					<li class="my-2">Gear Store</li>
+				</ul>
+			</div>    
+			<div class="col-md-2 mx-auto mb-4">
+				<ul class="list-unstyled">
+					<li class="my-2">Product Support</li>
+					<li class="my-2">Product Registration</li>
+					<li class="my-2">Find an Authorized Dealer</li>
+					<li class="my-2">Sales Agent Locator</li>
+					<li class="my-2">Dealer Portal</li>
+				</ul>
+			</div>
 			<div class="col-md-3 mx-auto mb-4">
 				<h6 class="text-uppercase font-weight-bold text-white">Contact Us</h6>
 				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 0.5px">
