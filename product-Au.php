@@ -143,6 +143,12 @@ $fan = get_all_fan();
 
                             <li class="list-group-item">Number of Blades: <?php echo $item['Number_of_Blades']; ?></li>
                         </ul>
+                        <form method="post" action="detail.php" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="<?php echo $item['id']; ?>">
+                            <button class="btn btn-success btn-outline-success my-2 my-sm-0 text-white"
+                                onclick="window.location = 'detail.php?id=<?php echo $item['id']; ?>'" type="button"
+                                value="edit">Detail</button>
+                        </form>
                     </div>
                     <?php } ?>
                 </div>

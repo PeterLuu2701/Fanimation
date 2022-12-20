@@ -123,7 +123,7 @@ function get_all_fan()
 }
  
 // Hàm lấy house theo ID
-function get_houses($id)
+function get_fan($id)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -132,7 +132,7 @@ function get_houses($id)
     connect_db();
      
     // Câu truy vấn lấy tất cả house
-    $sql = "select * from business where id = {$id}";
+    $sql = "select * from products where id = {$id}";
     //  echo $sql;
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);
