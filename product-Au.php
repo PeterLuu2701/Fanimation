@@ -130,7 +130,7 @@ $fan = get_all_fan();
                 <div class="row">
                     <?php foreach ($fan as $item){ ?>
                     <div class="card ml-2 mt-lg-5 mb-lg-4" style="width: 23%;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src='./img/<?php echo $item['id']; ?>.jpg' class="card-img-top" alt="..." height="200px">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $item['Name']; ?> - <?php echo $item['SKU']; ?></h5>
                             <p class="card-text">Color: <?php echo $item['Finish']; ?></p>
