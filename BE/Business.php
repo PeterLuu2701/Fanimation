@@ -93,8 +93,8 @@ function login($userLogin, $passLogin){
     // return $query;
 }
  
-// Hàm lấy tất cả house
-function get_all_houses()
+// Hàm lấy tất cả fan
+function get_all_fan()
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -103,7 +103,7 @@ function get_all_houses()
     connect_db();
      
     // Câu truy vấn lấy tất cả house
-    $sql = "select * from business";
+    $sql = "select * from products";
      
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);

@@ -1,7 +1,7 @@
 <?php
-echo "hhhhh";
+// echo "hhhhh";
 require './BE/Business.php';
-var_dump($_POST);
+// var_dump($_POST);
 
 if(!empty($_POST["register"])){
 	// echo "hhhhh121212";
@@ -71,6 +71,8 @@ if (!$errors) {
 	$_SESSION['username'] = $data['userLogin'];
 	setcookie("success", "Đăng nhập thành công!", time()+1, "/","", 0);
     echo '<script>alert("Đăng nhập thành công!")</script>';
+    $_SESSION["loged"] = "true";
+    session_start();
     // header("location: index.php");
 }
 
