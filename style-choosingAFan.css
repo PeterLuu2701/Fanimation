@@ -138,6 +138,15 @@ footer a {
     color: #fff !important ;
     text-decoration: none;
 }
+footer li{
+    color: #fff;
+}
+
+footer li:hover{
+    cursor: pointer;
+    color: #fff;
+    text-decoration: underline;
+}
 
 
 .top-footer {

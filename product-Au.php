@@ -33,30 +33,28 @@
                         </div>
                         <div class="close-btn"></div>
                         <li class="menu-item">
-                            <a class="sub-btn" href="#">Products
+                            <a class="sub-btn" href="product-Au.php">Products
                             <i class="fas fa-angle-down"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li class="sub-item"><a href="product.html">All Products</a></li>
-                                <li class="sub-item"><a href="#">Damp Rated Fans</a></li>
-                                <li class="sub-item"><a href="#">Wet Rated Fans</a></li>
-                                <li class="sub-item"><a href="#">Dry Rated Fans</a></li>
+                                <li class="sub-item"><a href="product-Au.php">All Products</a></li>
+                                <li class="sub-item"><a href="product-Au.php">Damp Rated Fans</a></li>
+                                <li class="sub-item"><a href="product-Au.php">Wet Rated Fans</a></li>
+                                <li class="sub-item"><a href="product-Au.php">Dry Rated Fans</a></li>
                             </ul>
                        
                         <li class="menu-item">
-                            <a class="sub-btn" href="#">Help Center
+                            <a class="sub-btn" href="contact.php">Help Center
                             <i class="fas fa-angle-down"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li class="sub-item"><a href="#">Product Registration</a></li>
-                                <li class="sub-item"><a href="#">Find an Authorized Dealer</a></li>
-                                <li class="sub-item"><a href="#">Choosing a Fan</a></li>
-                                <li class="sub-item"><a href="#">Dealer Portal</a></li>
-                                <li class="sub-item"><a href="#">General Inquiries</a></li>
+                                <li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
+                                <li class="sub-item"><a href="contact.php">Contact</a></li>
+                                <li class="sub-item"><a href="choosingAFan.php">Choosing a Fan</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="aboutus.html">About</a></li>
-                        <li class="menu-item"><a href="login.html"><i class="far fa-user mr-2"></i>Login</a></li>
+                        <li class="menu-item"><a href="aboutus.php">About</a></li>
+                        <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
                     </ul>
                 </div>
                 <div class="menu-btn"></div>
@@ -395,38 +393,34 @@
                                 </div>
                             </div> -->
                         </div>
-                        
                         <div class="col-md-2 mx-auto mb-4">
-                            <ul class="list-unstyled">
-                                <li class="my-2"><a href="#">Home</a></li>
-                                <li class="my-2"><a href="#">Blog</a></li>
-                                <li class="my-2"><a href="#">Antique Fan</a></li>
-                                <li class="my-2"><a href="#">Museum</a></li>
-                                <li class="my-2"><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-            
-                        <div class="col-md-2 mx-auto mb-4">                  
-                            <ul class="list-unstyled">
-                                <li class="my-2"><a href="#">Products</a></li>
-                                <li class="my-2"><a href="#">Product Catalog</a></li>
-                                <li class="my-2"><a href="#">Choosing a Fan</a></li>
-                                <li class="my-2"><a href="#">Special Offers</a></li>
-                                <li class="my-2"><a href="#">Smart Controls</a></li>
-                                <li class="my-2"><a href="#">Gear Store</a></li>
-                            </ul>
-                        </div>    
-            
-                        <div class="col-md-2 mx-auto mb-4">
-                            <ul class="list-unstyled">
-                                <li class="my-2"><a href="#">Product Support</a></li>
-                                <li class="my-2"><a href="#">Product Registration</a></li>
-                                <li class="my-2"><a href="#">Find an Authorized Dealer</a></li>
-                                <li class="my-2"><a href="#">Sales Agent Locator</a></li>
-                                <li class="my-2"><a href="#">Dealer Portal</a></li>
-                            </ul>
-                        </div>
-            
+				<ul class="list-unstyled">
+					<li class="my-2">Home</li>
+					<li class="my-2">Blog</li>
+					<li class="my-2">Antique Fan</li>
+					<li class="my-2">Museum</li>
+					<li class="my-2">Contact</li>
+				</ul>
+			</div>
+			<div class="col-md-2 mx-auto mb-4">                  
+				<ul class="list-unstyled">
+					<li class="my-2">Products</li>
+					<li class="my-2">Product Catalog</li>
+					<li class="my-2">Choosing a Fan</li>
+					<li class="my-2">Special Offers</li>
+					<li class="my-2">Smart Controls</li>
+					<li class="my-2">Gear Store</li>
+				</ul>
+			</div>    
+			<div class="col-md-2 mx-auto mb-4">
+				<ul class="list-unstyled">
+					<li class="my-2">Product Support</li>
+					<li class="my-2">Product Registration</li>
+					<li class="my-2">Find an Authorized Dealer</li>
+					<li class="my-2">Sales Agent Locator</li>
+					<li class="my-2">Dealer Portal</li>
+				</ul>
+			</div>
                         <div class="contact col-md-3 mx-auto mb-4">
                             <h6 class="text-uppercase font-weight-bold text-white">Contact Us</h6>
                             <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 0.5px">
