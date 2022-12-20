@@ -46,22 +46,25 @@ require './BE/login_logic.php'
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form">
+                <form action="login.php" method="post" enctype="multipart/form-data" class="sign-up-form">
                     <img src="./img/logo.png" width="200px" alt="">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Username" name="user" />
+                        <?php if (!empty($errors['user'])) echo $errors['user']; ?>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" name="email" />
+                        <?php if (!empty($errors['email'])) echo $errors['email']; ?>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" name="pass" />
+                        <?php if (!empty($errors['pass'])) echo $errors['pass']; ?>
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
+                    <input type="submit" class="btn" value="Sign up" name="register" />
                     <p class="social-text">Or Sign up with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
