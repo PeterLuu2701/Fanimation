@@ -8,8 +8,7 @@ if(!empty($_POST["register"])){
 // echo $_POST["register"];
 $data['user']        = isset($_POST['user']) ? $_POST['user'] : '';
 $data['pass']        = isset($_POST['pass']) ? $_POST['pass'] : '';
-$data['passConfirm']        = isset($_POST['passConfirm']) ? $_POST['passConfirm'] : '';
-$data['acc']        = isset($_POST['acc']) ? $_POST['acc'] : '';
+$data['email']        = isset($_POST['email']) ? $_POST['email'] : '';
 
 $errors = array();
 if (empty($data['user'])){
@@ -18,15 +17,11 @@ if (empty($data['user'])){
 if (empty($data['pass'])){
         $errors['pass'] = 'Chưa nhập password';
     }
-if (empty($data['passConfirm'])){
-        $errors['passConfirm'] = 'Chưa nhập confirm password';
+if (empty($data['email'])){
+        $errors['email'] = 'Chưa nhập email';
     }
-if ($data['passConfirm'] != $data['pass']){
-        $errors['passConfirm'] = 'Password và Confirm Password không giống nhau';
-        $errors['pass'] = 'Password và Confirm Password không giống nhau';
-    }
-if (empty($data['acc'])){
-        $errors['acc'] = 'Chưa nhập tên';
+     if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Email sai định dạng";
     }
 
 if ($errors){
@@ -36,7 +31,7 @@ if ($errors){
 
 // var_dump($errors);
 if (!$errors) {
-    register($data['user'], $data['pass'], $data['acc']);
+    register($data['user'], $data['pass'], $data['email']);
     setcookie("success", "Đăng ký thành công!", time()+1, "/","", 0);
     echo '<script>alert("Đăng ký thành công! Mời đăng nhập")</script>';
     // header("location: index.php");

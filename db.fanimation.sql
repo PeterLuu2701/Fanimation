@@ -34,6 +34,7 @@ CREATE TABLE User_Info (
  User_ID int NOT NULL AUTO_INCREMENT,
  Username varchar(50) NOT NULL,
  Pass_word varchar(50) NOT NULL,
+ Email varchar(50) NOT NULL,
  PRIMARY KEY (User_ID)
 );
 

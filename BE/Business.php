@@ -36,7 +36,7 @@ function disconnect_db()
 }
 
 //Hàm register
-function register($user, $pass, $acc){
+function register($user, $pass, $email){
 
   // Gọi tới biến toàn cục $conn
   global $conn;
@@ -45,13 +45,13 @@ function register($user, $pass, $acc){
     connect_db();
 
     // Chống SQL Injection
-    $username = addslashes($user);
-    $password = addslashes($pass);
+    $user = addslashes($user);
+    $pass = addslashes($pass);
   
     // Truy vấn 
     $sql = "
-            INSERT INTO user_info ( Username, Pass_word) VALUES
-            ( '$username', '$password')
+            INSERT INTO user_info ( Username, Pass_word, Email) VALUES
+            ( '$user', '$pass', '$email')
             ";
 //  echo $sql;
     // Thực hiện câu truy vấn
