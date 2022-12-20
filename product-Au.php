@@ -145,7 +145,7 @@ $fan = get_all_fan();
                         </ul>
                         <form method="post" action="detail.php" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?php echo $item['id']; ?>">
-                            <button class="btn btn-success btn-outline-success my-2 my-sm-0 text-white"
+                            <button class="btn btn-success"
                                 onclick="window.location = 'detail.php?id=<?php echo $item['id']; ?>'" type="button"
                                 value="edit">Detail</button>
                         </form>
