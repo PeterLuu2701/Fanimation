@@ -26,13 +26,13 @@ session_start();
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-        <a href="index.html" class="logo">
-            <img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
-        </a>
-        <div class="navigation">
-            <ul class="menu">
+<!-- HEADER -->
+<header>
+	<a href="index.php" class="logo">
+		<img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
+	</a>
+	<div class="navigation">
+		<ul class="menu">
 
                 <div class="searchbar">
                     <input type="text" placeholder="Search for ...">
@@ -41,38 +41,36 @@ session_start();
                     </div>
                 </div>
 
-                <div class="close-btn"></div>
-                <li class="menu-item">
-                    <a class="sub-btn" href="product.php">Products
-                        <i class="fas fa-angle-down"></i>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="sub-item"><a href="product.php">All Products</a></li>
-                        <li class="sub-item"><a href="product.php">Damp Rated Fans</a></li>
-                        <li class="sub-item"><a href="product.php">Wet Rated Fans</a></li>
-                        <li class="sub-item"><a href="product.php">Dry Rated Fans</a></li>
-                    </ul>
-                </li>
+			<div class="close-btn"></div>
+			<li class="menu-item">
+				<a class="sub-btn" href="product-Au.php">Products
+					<i class="fas fa-angle-down"></i>
+				</a>
+				<ul class="sub-menu">
+					<li class="sub-item"><a href="product-Au.php">All Products</a></li>
+					<li class="sub-item"><a href="product-Au.php">Damp Rated Fans</a></li>
+					<li class="sub-item"><a href="product-Au.php">Wet Rated Fans</a></li>
+					<li class="sub-item"><a href="product-Au.php">Dry Rated Fans</a></li>
+				</ul>
+			</li>           
 
-                <li class="menu-item">
-                    <a class="sub-btn" href="contact.php">Help Center
-                        <i class="fas fa-angle-down"></i>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
-                        <li class="sub-item"><a href="contact.php">Contact</a></li>
-                        <li class="sub-item"><a href="explore.php">Choosing a Fan</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item"><a href="aboutus.php">About</a></li>
-                <li class="menu-item">
-                    <a href="login.php"><i class="far fa-user mr-2"></i>Login</a>
-                </li>
-            </ul>
-        </div>
-        <div class="menu-btn"></div>
-    </header>
-    <!-- HEADER -->
+			<li class="menu-item">
+				<a class="sub-btn" href="contact.php">Help Center
+					<i class="fas fa-angle-down"></i>
+				</a>
+				<ul class="sub-menu">
+					<li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
+					<li class="sub-item"><a href="contact.php">Contact</a></li>
+					<li class="sub-item"><a href="choosingAFan.php">Choosing a Fan</a></li>
+				</ul>
+			</li>
+			<li class="menu-item"><a href="aboutus.php">About</a></li>
+			<li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
+		</ul>
+	</div>
+	<div class="menu-btn"></div>
+</header>
+<!-- HEADER -->
 
     <!-- Carousel -->
     <div id="slides" class="carousel slide" data-ride="carousel">
@@ -189,67 +187,60 @@ session_start();
     </div>
     <!-- Features End -->
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container ">
-            <div class="row">
-                <div class="col-lg-5">
-                    <img class="img-fluid rounded" src="img/arden_fan_ad1.jpg" alt="">
-                </div>
-                <div class="col-lg-7 mt-4 mt-lg-0">
-                    <h2 class="position-relative text-center text-black-50 bg-white rounded p-3 mt-4 mb-4 d-none d-lg-block"
-                        style="width: 250px; margin-left: -205px;">Choosing a Fan</h2>
-                    <h1 class="mb-4">Location is everything.</h1>
-                    <p>Installing a fan in your favorite indoor space? Or adding one to your outdoor haven? The location
-                        determines the fan rating (dry, damp and wet) you need. From there, the fun begins as you choose
-                        a style that fits you!</p>
-                    <a href="#" class="btn btn-dark mt-2">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+<!-- About Start -->
+<div class="container-fluid py-5">
+	<div class="container ">
+		<div class="row">
+			<div class="col-lg-5">
+				<img class="img-fluid rounded" src="img/arden_fan_ad1.jpg" alt="">
+			</div>
+			<div class="col-lg-7 mt-4 mt-lg-0">
+				<h2 class="position-relative text-center text-black-50 bg-white rounded p-3 mt-4 mb-4 d-none d-lg-block" style="width: 250px; margin-left: -205px;">Choosing a Fan</h2>
+				<h1 class="mb-4">Location is everything.</h1>
+				<p>Installing a fan in your favorite indoor space? Or adding one to your outdoor haven? The location determines the fan rating (dry, damp and wet) you need. From there, the fun begins as you choose a style that fits you!</p>
+				<a href="#" class="btn btn-dark mt-2">Learn More</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About End -->
 
-    <!-- Action Start -->
-    <div class="container-fluid ">
-        <div class="container ">
-            <div class="bg-action rounded" style="height: 500px;">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-lg-6 py-5 text-center">
-                        <h1 class="text-white mb-4">What Is CCT Select?</h1>
-                        <a class="btn btn-light py-3 px-5 mt-2" href="#">Learn More About Our Technology</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <iframe width="400" height="400" src="./img/commercial.mp4" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Action End -->
+<!-- Action Start -->
+<div class="container-fluid ">
+	<div class="container">
+		<div class="bg-action rounded" style="height: 500px;">
+			<div class="row h-100 align-items-center justify-content-center">
+				<div class="col-lg-6 py-5 text-center">
+					<h1 class="text-white mb-4">What Is CCT Select?</h1>
+					<a class="btn btn-light py-3 px-5 mt-2" href="#">Learn More About Our Technology</a>
+				</div>
+				<div class="col-lg-6">
+					<iframe width="400" height="400" src="./img/commercial.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Action End -->
 
-    <!-- Services Start -->
-    <div class="container-fluid">
-        <div class="container">
-            <div class="rounded ">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="row">
-                        <div class="col-lg-6 py-5">
-                            <a href="product.html"><img src="img/showroomcollection2018_hover.jpg"
-                                    style="width:100%"></a>
-                        </div>
-                        <div class="col-lg-6 py-5">
-                            <a href="product.html"><img src="img/banner-fanimation-studio1_hover.jpg"
-                                    style="width:100%"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services End -->
+<!-- Services Start -->    
+<div class="container-fluid">
+	<div class="container">
+		<div class="rounded ">
+			<div class="row h-100 align-items-center justify-content-center">
+				<div class="row">
+					<div class="col-lg-6 py-5">
+						<a href="product-Au.php"><img src="img/showroomcollection2018_hover.jpg" style="width:100%"></a>
+					</div>
+					<div class="col-lg-6 py-5">                            
+						<a href="product-Au.php"><img src="img/banner-fanimation-studio1_hover.jpg" style="width:100%"></a>
+					</div>
+				</div>                          
+			</div> 
+		</div>
+	</div>
+</div>
+<!-- Services End -->
 
 
     <!-- jumbotron Catalog -->
@@ -305,53 +296,48 @@ session_start();
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.925932837542!2d-86.24890418512103!3d39.94304639223601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814aa9825faa5e1%3A0xe542c8f68a2cd493!2s10983%20Bennett%20Pkwy%20Ext%2C%20Zionsville%2C%20IN%2046077%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1669715711680!5m2!1svi!2s" width="800" height="310" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div> -->
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <ul class="list-unstyled">
-                        <li class="my-2"><a href="#">Home</a></li>
-                        <li class="my-2"><a href="#">Blog</a></li>
-                        <li class="my-2"><a href="#">Antique Fan</a></li>
-                        <li class="my-2"><a href="#">Museum</a></li>
-                        <li class="my-2"><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <ul class="list-unstyled">
-                        <li class="my-2"><a href="#">Products</a></li>
-                        <li class="my-2"><a href="#">Product Catalog</a></li>
-                        <li class="my-2"><a href="#">Choosing a Fan</a></li>
-                        <li class="my-2"><a href="#">Special Offers</a></li>
-                        <li class="my-2"><a href="#">Smart Controls</a></li>
-                        <li class="my-2"><a href="#">Gear Store</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <ul class="list-unstyled">
-                        <li class="my-2"><a href="#">Product Support</a></li>
-                        <li class="my-2"><a href="#">Product Registration</a></li>
-                        <li class="my-2"><a href="#">Find an Authorized Dealer</a></li>
-                        <li class="my-2"><a href="#">Sales Agent Locator</a></li>
-                        <li class="my-2"><a href="#">Dealer Portal</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold text-white">Contact Us</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 0.5px">
-                    <div class="contact-area">
-                        <div class="row">
-                            <div class="row-md-6 col-sm-12 col-xs-12">
-                                <div class="contact-form">
-                                    <form>
-                                        <div class="form-group text-white">
-                                            <label for="formGroupExampleInput">Name</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput"
-                                                placeholder="">
-                                        </div>
-                                        <!-- <div class="form-group">
+			</div>
+			<div class="col-md-2 mx-auto mb-4">
+				<ul class="list-unstyled">
+					<li class="my-2">Home</li>
+					<li class="my-2">Blog</li>
+					<li class="my-2">Antique Fan</li>
+					<li class="my-2">Museum</li>
+					<li class="my-2">Contact</li>
+				</ul>
+			</div>
+			<div class="col-md-2 mx-auto mb-4">                  
+				<ul class="list-unstyled">
+					<li class="my-2">Products</li>
+					<li class="my-2">Product Catalog</li>
+					<li class="my-2">Choosing a Fan</li>
+					<li class="my-2">Special Offers</li>
+					<li class="my-2">Smart Controls</li>
+					<li class="my-2">Gear Store</li>
+				</ul>
+			</div>    
+			<div class="col-md-2 mx-auto mb-4">
+				<ul class="list-unstyled">
+					<li class="my-2">Product Support</li>
+					<li class="my-2">Product Registration</li>
+					<li class="my-2">Find an Authorized Dealer</li>
+					<li class="my-2">Sales Agent Locator</li>
+					<li class="my-2">Dealer Portal</li>
+				</ul>
+			</div>
+			<div class="col-md-3 mx-auto mb-4">
+				<h6 class="text-uppercase font-weight-bold text-white">Contact Us</h6>
+				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 0.5px">
+				<div class="contact-area">
+					<div class="row">
+						<div class="row-md-6 col-sm-12 col-xs-12">
+							<div class="contact-form">
+								<form>
+									<div class="form-group text-white">
+										<label for="formGroupExampleInput">Name</label>
+										<input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+									  </div>
+									  <!-- <div class="form-group">
 										<label for="formGroupExampleInput2">Phone Number</label>
 										<input type="number" class="form-control" id="formGroupExampleInput2" placeholder="">
 									  </div> -->
