@@ -22,14 +22,14 @@ require './BE/login_logic.php'
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="userLogin" />
-                        <p class="validate"> <?php if (!empty($errors['userLogin'])) echo $errors['userLogin']; ?>
-                        </p>
+                        <span class="validate"> <?php if (!empty($errors['userLogin'])) echo $errors['userLogin']; ?>
+                        </span>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" name="passLogin" />
-                        <p class="validate"> <?php if (!empty($errors['passLogin'])) echo $errors['passLogin']; ?>
-                        </p>
+                        <span class="validate"> <?php if (!empty($errors['passLogin'])) echo $errors['passLogin']; ?>
+                        </span>
                     </div>
                     <button type="submit" name="login" class="btn solid">Login</button>
                     <p class="social-text">Or Sign in with social platforms</p>

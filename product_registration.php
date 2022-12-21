@@ -46,6 +46,7 @@ require './BE/login_logic.php';
                         <li class="sub-item"><a href="Damp.php">Damp Rated Fans</a></li>
                         <li class="sub-item"><a href="Wet.php">Wet Rated Fans</a></li>
                         <li class="sub-item"><a href="Dry.php">Dry Rated Fans</a></li>
+                        <li class="sub-item"><a href="specialoffer.php">Special Offer</a></li>
                     </ul>
                 </li>
 
@@ -66,7 +67,7 @@ require './BE/login_logic.php';
                 <?php if ($_SESSION["loged"] === "false"){ ?>
                 <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
                 <?php } else { 
-                echo '<li class="menu-item"> Hello ' . $_SESSION["username"] .'';
+                echo '<li class="menu-item hellouser" style="color:white;"> Hello ' . $_SESSION["username"] .'';
                 echo '<li class="menu-item"><a href="logout.php">Logout</a></li>';
                 } ?>
             </ul>
