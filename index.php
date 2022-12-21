@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require './BE/login_logic.php';
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -53,13 +56,21 @@
                         <i class="fas fa-angle-down"></i>
                     </a>
                     <ul class="sub-menu">
+                        <?php if ($_SESSION["username"] === "Admin"){ ?>
                         <li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
-                        <li class="sub-item"><a href="contact.php">Contact</a></li>
+                        <?php } ?>
+                        <li class="sub-item"><a href="contact.php">Contact</a>
+                        </li>
                         <li class="sub-item"><a href="choosingAFan.php">Choosing a Fan</a></li>
                     </ul>
                 </li>
                 <li class="menu-item"><a href="aboutus.php">About</a></li>
+                <?php if ($_SESSION["loged"] === "false"){ ?>
                 <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
+                <?php } else { 
+                echo '<li class="menu-item"> Hello ' . $_SESSION["username"] .'';
+                echo '<li class="menu-item"><a href="logout.php">Logout</a></li>';
+                } ?>
             </ul>
         </div>
         <div class="menu-btn"></div>

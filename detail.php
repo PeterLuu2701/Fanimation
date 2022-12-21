@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+<?php
+require './BE/login_logic.php';
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +23,7 @@
 
 <body>
     <div class="main col-xs-12">
-        <header class="header">
+        <header>
             <a href="index.php" class="logo">
                 <img src="https://fanimation.com/wp-content/uploads/2021/04/Logo_white_1.png" alt="">
             </a>
@@ -33,6 +36,8 @@
                             <i class="fas fa-search"></i>
                         </div>
                     </div>
+
+
                     <div class="close-btn"></div>
                     <li class="menu-item">
                         <a class="sub-btn" href="product-Au.php">Products
@@ -44,19 +49,28 @@
                             <li class="sub-item"><a href="product-Au.php">Wet Rated Fans</a></li>
                             <li class="sub-item"><a href="product-Au.php">Dry Rated Fans</a></li>
                         </ul>
+                    </li>
 
                     <li class="menu-item">
                         <a class="sub-btn" href="contact.php">Help Center
                             <i class="fas fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
+                            <?php if ($_SESSION["username"] === "Admin"){ ?>
                             <li class="sub-item"><a href="product_registration.php">Product Registration</a></li>
-                            <li class="sub-item"><a href="contact.php">Contact</a></li>
+                            <?php } ?>
+                            <li class="sub-item"><a href="contact.php">Contact</a>
+                            </li>
                             <li class="sub-item"><a href="choosingAFan.php">Choosing a Fan</a></li>
                         </ul>
                     </li>
                     <li class="menu-item"><a href="aboutus.php">About</a></li>
+                    <?php if ($_SESSION["loged"] === "false"){ ?>
                     <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
+                    <?php } else { 
+                echo '<li class="menu-item"> Hello ' . $_SESSION["username"] .'';
+                echo '<li class="menu-item"><a href="logout.php">Logout</a></li>';
+                } ?>
                 </ul>
             </div>
             <div class="menu-btn"></div>
