@@ -44,9 +44,9 @@ require './BE/login_logic.php';
                     </a>
                     <ul class="sub-menu">
                         <li class="sub-item"><a href="product-Au.php">All Products</a></li>
-                        <li class="sub-item"><a href="product-Au.php">Damp Rated Fans</a></li>
-                        <li class="sub-item"><a href="product-Au.php">Wet Rated Fans</a></li>
-                        <li class="sub-item"><a href="product-Au.php">Dry Rated Fans</a></li>
+                        <li class="sub-item"><a href="Damp.php">Damp Rated Fans</a></li>
+                        <li class="sub-item"><a href="Wet.php">Wet Rated Fans</a></li>
+                        <li class="sub-item"><a href="Dry.php">Dry Rated Fans</a></li>
                     </ul>
                 </li>
 

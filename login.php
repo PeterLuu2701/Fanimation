@@ -22,12 +22,14 @@ require './BE/login_logic.php'
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="userLogin" />
-                        <?php if (!empty($errors['userLogin'])) echo $errors['userLogin']; ?>
+                        <p class="validate"> <?php if (!empty($errors['userLogin'])) echo $errors['userLogin']; ?>
+                        </p>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" name="passLogin" />
-                        <?php if (!empty($errors['passLogin'])) echo $errors['passLogin']; ?>
+                        <p class="validate"> <?php if (!empty($errors['passLogin'])) echo $errors['passLogin']; ?>
+                        </p>
                     </div>
                     <button type="submit" name="login" class="btn solid">Login</button>
                     <p class="social-text">Or Sign in with social platforms</p>
@@ -52,17 +54,20 @@ require './BE/login_logic.php'
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="user" />
-                        <?php if (!empty($errors['user'])) echo $errors['user']; ?>
+                        <span class="validate"> <?php if (!empty($errors['user'])) echo $errors['user']; ?>
+                        </span>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Email" name="email" />
-                        <?php if (!empty($errors['email'])) echo $errors['email']; ?>
+                        <span class="validate"> <?php if (!empty($errors['email'])) echo $errors['email']; ?>
+                        </span>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" name="pass" />
-                        <?php if (!empty($errors['pass'])) echo $errors['pass']; ?>
+                        <span class="validate"> <?php if (!empty($errors['pass'])) echo $errors['pass']; ?>
+                        </span>
                     </div>
                     <input type="submit" class="btn" value="Sign up" name="register" />
                     <p class="social-text">Or Sign up with social platforms</p>

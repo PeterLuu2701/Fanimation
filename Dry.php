@@ -140,6 +140,7 @@ $fan = get_all_fan();
             <div class="products">
                 <div class="row">
                     <?php foreach ($fan as $item){ ?>
+                    <?php if ($item['Location_Rating'] === 'Dry'){ ?>
                     <div class="card ml-2 mt-lg-5 mb-lg-4" style="width: 23%;">
                         <img src='./img/<?php echo $item['id']; ?>.jpg' class="card-img-top" alt="..." height="200px">
                         <div class="card-body">
@@ -161,6 +162,7 @@ $fan = get_all_fan();
                                 value="edit">Detail</button>
                         </form>
                     </div>
+                    <?php } ?>
                     <?php } ?>
                 </div>
             </div>

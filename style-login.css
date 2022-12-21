@@ -399,3 +399,10 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+.validate{
+  height: 50px;
+  width: 200px !important;
+  color: brown;
+  font-weight: 500;
+}
