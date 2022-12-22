@@ -1,8 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-require './BE/login_logic.php';
-// require './BE/Business.php'; 
+session_start();
+require './BE/Business.php';
+var_dump($_POST);
+
+if (!empty($_POST['submit'])){
+    echo 'đã vào';
+    // Lay data
+    
+    // $data['username']        = isset($_POST['username']) ? $_POST['username'] : '';
+    // $data['address']        = isset($_POST['address']) ? $_POST['address'] : '';
+    $data['name']        = isset($_POST['name']) ? $_POST['name'] : '';
+    $data['finish']        = isset($_POST['finish']) ? $_POST['finish'] : '';
+    $data['type']         = isset($_POST['type']) ? $_POST['type'] : '';
+    $data['control_type']    = isset($_POST['control_type']) ? $_POST['control_type'] : '';
+    $data['motor_size']          = isset($_POST['motor_size']) ? $_POST['motor_size'] : '';
+    $data['collection']          = isset($_POST['collection']) ? $_POST['collection'] : '';
+    $data['blades']          = isset($_POST['blades']) ? $_POST['blades'] : '';
+    
+    $target_dir = "img/";
+  
+    $data['target_file'] = $target_dir . basename($_FILES["fileUpload"]["name"]);
+ 
+    // Validate thong tin
+    $errors = array();
+    if (empty($data['name'])){
+        $errors['name'] = 'Chưa nhập tên sản phẩm';
+    }
+    if (empty($data['finish'])){
+        $errors['finish'] = 'Chưa nhập màu sản phẩm';
+    }
+    if (empty($data['type'])){
+        $errors['type'] = 'Chưa nhập loại';
+    }
+    if (empty($data['control_type'])){
+        $errors['control_type'] = 'Chưa nhập loại control';
+    }
+    if (empty($data['motor_size'])){
+        $errors['motor_size'] = 'Chưa nhập size';
+    }
+    if (empty($data['collection'])){
+        $errors['collection'] = 'Chưa nhập collection';
+    }
+    if (empty($data['blades'])){
+        $errors['blades'] = 'Chưa nhập số cánh quạt';
+    }
+    if (empty($data['target_file'])){
+        $errors['image'] = 'Chưa chọn hình ảnh';
+    }
+   
+    // Neu ko co loi thi insert
+    if (!$errors){
+        echo 'Gọi hàm';
+        UploadFile( $data['target_file']);
+        add_fan($data['name'],$data['finish'], $data['type'], $data['control_type'],$data['motor_size'],$data['collection'], $data['blades'], $data['target_file']);
+        // Trở về trang danh sách
+        header("location: product-Au.php");
+    }
+}
+
+disconnect_db();
 ?>
 
 <head>
@@ -131,126 +189,106 @@ require './BE/login_logic.php';
 
     <div class="container-fluid padding">
         <div class="row">
-            <div class="col-12">
-                <form class="needs-validation" action="product_registration.php" method="post"
-                    enctype="multipart/form-data">
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="validationCustom01">First name *</label></h6>
-                            <input type="text" class="form-control" id="validationCustom01" value="" />
-                            <span class="validate">
-                                <?php if (!empty($errors['username'])) echo $errors['username']; ?>
-                            </span>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="validationCustom02">Last name *</label></h6>
-                            <input type="text" class="form-control" id="validationCustom02" value="" name="username"
-                                id="username" />
-                            <span class="validate">
-                                <?php if (!empty($errors['username'])) echo $errors['username']; ?>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="inputAddress">Address</label></h6>
-                            <input type="tel" class="form-control" id="inputAddress" placeholder="" id="address"
-                                name="address" />
-                            <span class="validate">
-                                <?php if (!empty($errors['address'])) echo $errors['address']; ?>
-                            </span>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="inputEmail3">Email *</label></h6>
-                            <input type="email" class="form-control" id="inputEmail3" />
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-md-4 mb-3">
-                            <h6><label for="example1">Fan Model Name</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Zonix" id="name"
-                                name="name" />
-                            <span class="validate">
-                                <?php if (!empty($errors['name'])) echo $errors['name']; ?>
-                            </span>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <h6><label for="example1">Fan Model Number (SKU)</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: FP4620BL" id="SKU"
-                                name="SKU" />
-                            <span class="validate">
-                                <?php if (!empty($errors['SKU'])) echo $errors['SKU']; ?>
-                            </span>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <h6><label for="example1">Color</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Black" id="finish"
-                                name="finish" />
-                            <span class="validate">
-                                <?php if (!empty($errors['finish'])) echo $errors['finish']; ?>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Size</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: 172 x 15" id="motor_size"
-                                name="motor_size" />
-                            <span class="validate">
-                                <?php if (!empty($errors['motor_size'])) echo $errors['motor_size']; ?>
-                            </span>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Number of Blades</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: 3" id="blades"
-                                name="blades" />
-                            <span class="validate">
-                                <?php if (!empty($errors['blades'])) echo $errors['blades']; ?>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Control Type</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Remote Control"
-                                name="control_type" id="control_type" />
-                            <span class="validate">
-                                <?php if (!empty($errors['control_type'])) echo $errors['control_type']; ?>
-                            </span>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Collection</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Amped" id="collection"
-                                name="collection" />
-                            <span class="validate">
-                                <?php if (!empty($errors['collection'])) echo $errors['collection']; ?>
-                            </span>
-                        </div>
+            <form class="container" action="product_registration.php" method="post" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <h6><label for="validationCustom01">First name *</label></h6>
+                        <input type="text" class="form-control" id="validationCustom01" value="" />
                     </div>
                     <div class="col-md-6 mb-3">
-                        <h6><label class="form-select-custom" for="selection">Type *</label></h6>
-                        <select class="custom-select" id="type" name="type">
-                            <option value="Damp" selected>Damp Rated Fan</option>
-                            <option value="Wet">Wet Rated Fan</option>
-                            <option value="Dry">Dry Rated Fan</option>
-                        </select>
-                        <span class="validate"> <?php if (!empty($errors['type'])) echo $errors['type']; ?>
+                        <h6><label for="validationCustom02">Last name *</label></h6>
+                        <input type="text" class="form-control" id="validationCustom02" value="" name="username"
+                            id="username" />
+                        <span class="validate">
                         </span>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">Hình ảnh</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+                </div>
+                <div class="form-group row">
+                    <h6><label for="inputAddress">Address</label></h6>
+                    <input type="tel" class="form-control" id="inputAddress" placeholder="" id="address"
+                        name="address" />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                        <h6><label for="example1">Fan Model Name</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: Zonix" id="name" name="name" />
+                        <span class="validate">
+                            <?php if (!empty($errors['name'])) echo $errors['name']; ?>
+                        </span>
                     </div>
-                    <button class="btn btn-dark" type="submit" name="create">CREATE</button>
-                </form>
+                    <div class="col-md-4 mb-3">
+                        <h6><label for="example1">Fan Model Number (SKU)</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: FP4620BL" id="SKU" name="SKU" />
+                        <span class="validate">
+                            <?php if (!empty($errors['SKU'])) echo $errors['SKU']; ?>
+                        </span>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h6><label for="example1">Color</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: Black" id="finish"
+                            name="finish" />
+                        <span class="validate">
+                            <?php if (!empty($errors['finish'])) echo $errors['finish']; ?>
+                        </span>
+                    </div>
+                </div>
 
-            </div>
-
+                <div class="form-group row">
+                    <div class="col-md-6 mb-3">
+                        <h6><label for="example1">Size</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: 172 x 15" id="motor_size"
+                            name="motor_size" />
+                        <span class="validate">
+                            <?php if (!empty($errors['motor_size'])) echo $errors['motor_size']; ?>
+                        </span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6><label for="example1">Number of Blades</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: 3" id="blades" name="blades" />
+                        <span class="validate">
+                            <?php if (!empty($errors['blades'])) echo $errors['blades']; ?>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6 mb-3">
+                        <h6><label for="example1">Control Type</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: Remote Control"
+                            name="control_type" id="control_type" />
+                        <span class="validate">
+                            <?php if (!empty($errors['control_type'])) echo $errors['control_type']; ?>
+                        </span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h6><label for="example1">Collection</label></h6>
+                        <input type="text" class="form-control" placeholder="Example: Amped" id="collection"
+                            name="collection" />
+                        <span class="validate">
+                            <?php if (!empty($errors['collection'])) echo $errors['collection']; ?>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h6><label class="form-select-custom" for="selection">Type *</label></h6>
+                    <select class="custom-select" id="type" name="type">
+                        <option value="Damp" selected>Damp Rated Fan</option>
+                        <option value="Wet">Wet Rated Fan</option>
+                        <option value="Dry">Dry Rated Fan</option>
+                    </select>
+                    <span class="validate"> <?php if (!empty($errors['type'])) echo $errors['type']; ?>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Hình ảnh</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+                </div>
+                <button class="btn btn-dark" type="submit" name="submit">CREATE</button>
+            </form>
 
         </div>
+
+
+    </div>
     </div>
     </div>
 

@@ -447,3 +447,10 @@ footer li:hover{
 .hellouser {
     color: #fff Im !important;
 }
+
+.validate{
+    height: 50px !important;
+        width: 200px !important;
+        color: brown !important;
+        font-weight: 500 !important;
+}
