@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 require './BE/login_logic.php';
+// require './BE/Business.php'; 
 ?>
 
 <head>
@@ -136,24 +137,29 @@ require './BE/login_logic.php';
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="validationCustom01">First name *</label></h6>
-                            <input type="text" class="form-control" id="validationCustom01" value="" required />
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
+                            <input type="text" class="form-control" id="validationCustom01" value="" />
+                            <span class="validate">
+                                <?php if (!empty($errors['username'])) echo $errors['username']; ?>
+                            </span>
                         </div>
                         <div class="col-md-6 mb-3">
                             <h6><label for="validationCustom02">Last name *</label></h6>
-                            <input type="text" class="form-control" id="validationCustom02" value="" required />
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
+                            <input type="text" class="form-control" id="validationCustom02" value="" name="username"
+                                id="username" />
+                            <span class="validate">
+                                <?php if (!empty($errors['username'])) echo $errors['username']; ?>
+                            </span>
                         </div>
                     </div>
-                    
+
                     <div class="form-group row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="inputAddress">Address</label></h6>
-                            <input type="tel" class="form-control" id="inputAddress" placeholder="" />
+                            <input type="tel" class="form-control" id="inputAddress" placeholder="" id="address"
+                                name="address" />
+                            <span class="validate">
+                                <?php if (!empty($errors['address'])) echo $errors['address']; ?>
+                            </span>
                         </div>
                         <div class="col-md-6 mb-3">
                             <h6><label for="inputEmail3">Email *</label></h6>
@@ -162,82 +168,90 @@ require './BE/login_logic.php';
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <h6><label for="example1">Fan Model Name</label></h6>
                             <input type="text" class="form-control" placeholder="Example: Zonix" id="name"
                                 name="name" />
+                            <span class="validate">
+                                <?php if (!empty($errors['name'])) echo $errors['name']; ?>
+                            </span>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <h6><label for="example1">Fan Model Number (SKU)</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: FP4620BL" />
+                            <input type="text" class="form-control" placeholder="Example: FP4620BL" id="SKU"
+                                name="SKU" />
+                            <span class="validate">
+                                <?php if (!empty($errors['SKU'])) echo $errors['SKU']; ?>
+                            </span>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6><label for="example1">Color</label></h6>
+                            <input type="text" class="form-control" placeholder="Example: Black" id="finish"
+                                name="finish" />
+                            <span class="validate">
+                                <?php if (!empty($errors['finish'])) echo $errors['finish']; ?>
+                            </span>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Size</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: 172 x 15" />
+                            <input type="text" class="form-control" placeholder="Example: 172 x 15" id="motor_size"
+                                name="motor_size" />
+                            <span class="validate">
+                                <?php if (!empty($errors['motor_size'])) echo $errors['motor_size']; ?>
+                            </span>
                         </div>
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Number of Blades</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: 3" />
+                            <input type="text" class="form-control" placeholder="Example: 3" id="blades"
+                                name="blades" />
+                            <span class="validate">
+                                <?php if (!empty($errors['blades'])) echo $errors['blades']; ?>
+                            </span>
                         </div>
-                        <!-- <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Date Code</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: DBSQL or O421" />
-                            <label class="form-check-label" for="invalidCheck">
-                                The 5 digit code can be located on the top of the motor housing or on the inside of the
-                                remote control's
-                                battery compartment cover.
-                            </label>
-                        </div> -->
-
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Control Type</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Remote Control" />
+                            <input type="text" class="form-control" placeholder="Example: Remote Control"
+                                name="control_type" id="control_type" />
+                            <span class="validate">
+                                <?php if (!empty($errors['control_type'])) echo $errors['control_type']; ?>
+                            </span>
                         </div>
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Collection</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Amped" />
+                            <input type="text" class="form-control" placeholder="Example: Amped" id="collection"
+                                name="collection" />
+                            <span class="validate">
+                                <?php if (!empty($errors['collection'])) echo $errors['collection']; ?>
+                            </span>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <!-- <div class="col-md-6 mb-3">
-                            <form>
-                                <div class="form-group">
-                                    <h6><label for="exampleFormControlFile1">Copy of receipt (can be a photo
-                                            copy)</label></h6>
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" />
-                                    <p>Accepted file types: jpg, gif, png, pdf, jpeg, Max. file size: 5 MB.</p>
-                                    <p>File must be a jpg, gif, png or pdf and less than 1MB.</p>
-                                </div>
-                            </form>
-                        </div> -->
-                        <div class="col-md-6 mb-3">
-                            <h6><label class="form-check" for="check1">Subscribe to the Fanimation Newsletter</label>
-                            </h6>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                <label class="form-check-label" for="exampleCheck1">Yes</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h6><label class="form-select-custom" for="selection">Type *</label></h6>
-                            <select class="custom-select">
-                                <option selected>Damp Rated Fan</option>
-                                <option value="1">Wet Rated Fan</option>
-                                <option value="2">Dry Rated Fan</option>
-                            </select>
-                        </div>
+                    <div class="col-md-6 mb-3">
+                        <h6><label class="form-select-custom" for="selection">Type *</label></h6>
+                        <select class="custom-select" id="type" name="type">
+                            <option value="Damp" selected>Damp Rated Fan</option>
+                            <option value="Wet">Wet Rated Fan</option>
+                            <option value="Dry">Dry Rated Fan</option>
+                        </select>
+                        <span class="validate"> <?php if (!empty($errors['type'])) echo $errors['type']; ?>
+                        </span>
                     </div>
-                    
-
-                    <button class="btn btn-dark" type="submit">SUBMIT</button>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Hình ảnh</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+                    </div>
+                    <button class="btn btn-dark" type="submit" name="create">CREATE</button>
                 </form>
+
             </div>
+
+
         </div>
+    </div>
     </div>
 
 
@@ -383,27 +397,27 @@ require './BE/login_logic.php';
 
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-    // Data Picker Initialization
-    $('.datepicker').datepicker({
-        inline: true
-    });
+    // (function() {
+    //     ' use strict';
+    //     window.addEventListener('load', function() { // Fetch all the forms we want to apply custom
+    //         Bootstrap validation styles to
+    //         var forms = document.getElementsByClassName('needs-validation'); //
+    //         Loop over them and prevent submission
+    //         var validation = Array.prototype.filter.call(forms,
+    //             function(form) {
+    //                 form.addEventListener('submit', function(event) {
+    //                     if (form.checkValidity() === false) {
+    //                         event.preventDefault();
+    //                         event.stopPropagation();
+    //                     }
+    //                     form.classList.add('was-validated');
+    //                 }, false);
+    //             });
+    //     }, false);
+    // })(); // Data Picker
+    // Initialization $('.datepicker').datepicker({
+    //     inline: true
+    // });
     </script>
 </body>
 
