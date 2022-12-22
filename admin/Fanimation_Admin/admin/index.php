@@ -15,7 +15,7 @@ $file404 = 'modules/main/404.php'
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Blank Page</title>
+  <title>Admin Page</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -51,9 +51,9 @@ $file404 = 'modules/main/404.php'
     <!-- Logo -->
     <a href="assets/index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- <span class="logo-mini"><b>FANIMATION</b></span> -->
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>FANIMATION</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -153,7 +153,7 @@ $file404 = 'modules/main/404.php'
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Admin 1</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -161,8 +161,8 @@ $file404 = 'modules/main/404.php'
                 <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                Admin 1
+                  <small>Member since Nov. 2022</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -212,7 +212,7 @@ $file404 = 'modules/main/404.php'
           <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Admin 1</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -238,6 +238,16 @@ $file404 = 'modules/main/404.php'
         </li>
 
         <li class="treeview">
+          <a href="index.php?r=category">
+            <i class="fa fa-dashboard"></i> <span>Product Category Manage</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?r=category"><i class="fa fa-circle-o"></i> Category List</a></li>
+            <li><a href="index.php?r=category&a=create"><i class="fa fa-circle-o"></i> Add category</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
           <a href="index.php?r=product">
             <i class="fa fa-dashboard"></i> <span>Product Manage</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -246,15 +256,7 @@ $file404 = 'modules/main/404.php'
             <li><a href="index.php?r=product&a=create"><i class="fa fa-circle-o"></i> Add product</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="index.php?r=category">
-            <i class="fa fa-dashboard"></i> <span>Product Category Manage</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="index.php?r=category"><i class="fa fa-circle-o"></i> Product List</a></li>
-            <li><a href="index.php?r=category&a=create"><i class="fa fa-circle-o"></i> Add product</a></li>
-          </ul>
-        </li>
+        
                    
         
         
@@ -273,13 +275,13 @@ $file404 = 'modules/main/404.php'
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
-        <small>it all starts here</small>
+      Starts from here
+        <!-- <small>Starts from here</small> -->
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
+        <li><a href="#">View List</a></li>
+        <li class="active">Form</li>
       </ol>
     </section>
 
@@ -309,9 +311,9 @@ $file404 = 'modules/main/404.php'
 
         </div>
         <!-- /.box-body -->
-        <div class="box-footer">
+        <!-- <div class="box-footer">
           Footer
-        </div>
+        </div> -->
         <!-- /.box-footer-->
       </div>
       <!-- /.box -->
@@ -323,9 +325,9 @@ $file404 = 'modules/main/404.php'
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.3
+      <!-- <b>Version</b> 2.3.3 -->
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; <a href="#">Fanimation</a>.</strong> All rights
     reserved.
   </footer>
 
