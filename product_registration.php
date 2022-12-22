@@ -131,7 +131,8 @@ require './BE/login_logic.php';
     <div class="container-fluid padding">
         <div class="row">
             <div class="col-12">
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" action="product_registration.php" method="post"
+                    enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="validationCustom01">First name *</label></h6>
@@ -226,27 +227,13 @@ require './BE/login_logic.php';
                     <div class="form-group row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Fan Model Name</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Zonix" />
+                            <input type="text" class="form-control" placeholder="Example: Zonix" id="name"
+                                name="name" />
                         </div>
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Fan Model Number</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: FP4620BL" />
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Accessory Model Number</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: LK6720GR" />
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h6><label for="example1">Date Code</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: DBSQL or O421" />
-                            <label class="form-check-label" for="invalidCheck">
-                                The 5 digit code can be located on the top of the motor housing or on the inside of the
-                                remote control's
-                                battery compartment cover.
-                            </label>
+                            <input type="text" class="form-control" placeholder="Example: FP4620BL" id="SKU"
+                                name="SKU" />
                         </div>
                     </div>
                     <div class="form-row">

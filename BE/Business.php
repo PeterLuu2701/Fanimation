@@ -150,8 +150,8 @@ function get_fan($id)
     return $result;
 }
  
-// Hàm thêm house
-function add_business($name, $phone, $address, $city, $square, $price, $target_file)
+// Hàm thêm fan
+function add_fan($id, $username, $address, $name, $finish, $type, $control_type, $motor_size, $collection, $blades, $target_file)
 {
     echo 'Vô hàm';
     // Gọi tới biến toàn cục $conn
@@ -162,19 +162,23 @@ function add_business($name, $phone, $address, $city, $square, $price, $target_f
      
 
     // Chống SQL Injection
-    $name = addslashes($name);
-    $phone = addslashes($phone);
+    $id = addslashes($id);
+    $username = addslashes($username);
     $address = addslashes($address);
-    $city = addslashes($city);
-    $square = addslashes($square);
-    $price = addslashes($price);
+    $name = addslashes($name);
+    $finish = addslashes($finish);
+    $type = addslashes($type);
+    $control_type = addslashes($control_type);
+    $motor_size = addslashes($motor_size);
+    $collection = addslashes($collection);
+    $blades = addslashes($blades);
     $ImagePath = addslashes($target_file);
     
     
     // Câu truy vấn thêm
     $sql = "
-            INSERT INTO business(name, phone, address, city, square, price, image) VALUES
-            ('$name','$phone','$address', '$city','$square', '$price', '$ImagePath' )
+            INSERT INTO products(Name, Finish, Location_Rating, Control_Type, Motor_Size, Collection, Number_of_Blades, image) VALUES
+            ('$name','$finish','$type', '$control_type','$motor_size', '$collection', '$blades', '$ImagePath' )
     ";
     //  echo $sql;
     // Thực hiện câu truy vấn
@@ -185,7 +189,7 @@ function add_business($name, $phone, $address, $city, $square, $price, $target_f
  
  
 // Hàm sửa thông tin
-function edit_house($id, $name, $phone, $address, $city, $square, $price, $target_file)
+function edit_fan($id, $username, $address, $name, $finish, $type, $control_type, $motor_size, $collection, $blades, $target_file)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -195,26 +199,29 @@ function edit_house($id, $name, $phone, $address, $city, $square, $price, $targe
      
     // Chống SQL Injection
     $id = addslashes($id);
-    $name = addslashes($name);
-    $phone = addslashes($phone);
+    $username = addslashes($username);
     $address = addslashes($address);
-    $city = addslashes($city);
-    $square = addslashes($square);
-    $price = addslashes($price);
+    $name = addslashes($name);
+    $finish = addslashes($finish);
+    $type = addslashes($type);
+    $control_type = addslashes($control_type);
+    $motor_size = addslashes($motor_size);
+    $collection = addslashes($collection);
+    $blades = addslashes($blades);
     $ImagePath = addslashes($target_file);
     
      
     // Câu truy sửa
     $sql = "
-            UPDATE business SET
-            name = '$name',
-            phone = '$phone',
-            address='$address',
-            city='$city',
-            square='$square',
-            price= '$price',
+            UPDATE products SET
+            Name = '$name',
+            Finish = '$finish',
+            Location_Rating ='$type',
+            Control_Type='$control_type',
+            Motor_Size= '$motor_size',
+            Collection = '$collection',
+            Number_of_Blades = '$blades',
             image= '$ImagePath'
-            
             Where id='$id'
     ";
     echo $sql;
@@ -226,8 +233,8 @@ function edit_house($id, $name, $phone, $address, $city, $square, $price, $targe
 }
  
  
-// // Hàm xóa house
-function delete_houses($id)
+// // Hàm xóa fan
+function delete_fan($id)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -237,7 +244,7 @@ function delete_houses($id)
      
     // Câu truy xóa
     $sql = "
-            DELETE FROM business
+            DELETE FROM products
             WHERE id = '$id'
   ";
     //  echo $sql;    
