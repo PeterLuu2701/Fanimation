@@ -211,7 +211,6 @@ function edit_fan($id, $username, $address, $name, $finish, $type, $control_type
     $ImagePath = addslashes($target_file);
     
      
-    // Câu truy sửa
     $sql = "
             UPDATE products SET
             Name = '$name',
