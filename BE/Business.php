@@ -151,7 +151,7 @@ function get_fan($id)
 }
  
 // Hàm thêm fan
-function add_fan($id, $username, $address, $name, $finish, $type, $control_type, $motor_size, $collection, $blades, $target_file)
+function add_fan($username, $address, $name, $finish, $type, $control_type, $motor_size, $collection, $blades, $target_file)
 {
     echo 'Vô hàm';
     // Gọi tới biến toàn cục $conn
@@ -162,7 +162,6 @@ function add_fan($id, $username, $address, $name, $finish, $type, $control_type,
      
 
     // Chống SQL Injection
-    $id = addslashes($id);
     $username = addslashes($username);
     $address = addslashes($address);
     $name = addslashes($name);
