@@ -46,6 +46,7 @@ require './BE/login_logic.php';
                         <li class="sub-item"><a href="Damp.php">Damp Rated Fans</a></li>
                         <li class="sub-item"><a href="Wet.php">Wet Rated Fans</a></li>
                         <li class="sub-item"><a href="Dry.php">Dry Rated Fans</a></li>
+                        <li class="sub-item"><a href="specialoffer.php">Special Offer</a></li>
                     </ul>
                 </li>
 
@@ -66,7 +67,7 @@ require './BE/login_logic.php';
                 <?php if ($_SESSION["loged"] === "false"){ ?>
                 <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
                 <?php } else { 
-                echo '<li class="menu-item"> Hello ' . $_SESSION["username"] .'';
+                echo '<li class="menu-item hellouser" style="color:white;"> Hello ' . $_SESSION["username"] .'';
                 echo '<li class="menu-item"><a href="logout.php">Logout</a></li>';
                 } ?>
             </ul>
@@ -130,7 +131,8 @@ require './BE/login_logic.php';
     <div class="container-fluid padding">
         <div class="row">
             <div class="col-12">
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" action="product_registration.php" method="post"
+                    enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="validationCustom01">First name *</label></h6>
@@ -162,7 +164,8 @@ require './BE/login_logic.php';
                     <div class="form-group row">
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Fan Model Name</label></h6>
-                            <input type="text" class="form-control" placeholder="Example: Zonix" />
+                            <input type="text" class="form-control" placeholder="Example: Zonix" id="name"
+                                name="name" />
                         </div>
                         <div class="col-md-6 mb-3">
                             <h6><label for="example1">Fan Model Number (SKU)</label></h6>
@@ -188,6 +191,7 @@ require './BE/login_logic.php';
                                 battery compartment cover.
                             </label>
                         </div> -->
+
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 mb-3">

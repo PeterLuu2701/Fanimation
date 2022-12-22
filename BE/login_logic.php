@@ -23,6 +23,9 @@ if (empty($data['email'])){
      if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Email sai định dạng";
     }
+    if(!preg_match('/^[a-z0-9 _]+$/i', $data['user'])){
+        $errors['user'] = 'Vui lòng không nhập ký tự đặc biệt';
+    }
 
 if ($errors){
    setcookie("error", "Đăng ký không thành công!", time()+1, "/","", 0); 

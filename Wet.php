@@ -55,6 +55,7 @@ $fan = get_all_fan();
                             <li class="sub-item"><a href="Damp.php">Damp Rated Fans</a></li>
                             <li class="sub-item"><a href="Wet.php">Wet Rated Fans</a></li>
                             <li class="sub-item"><a href="Dry.php">Dry Rated Fans</a></li>
+                            <li class="sub-item"><a href="specialoffer.php">Special Offer</a></li>
                         </ul>
                     </li>
 
@@ -75,7 +76,7 @@ $fan = get_all_fan();
                     <?php if ($_SESSION["loged"] === "false"){ ?>
                     <li class="menu-item"><a href="login.php"><i class="far fa-user mr-2"></i>Login</a></li>
                     <?php } else { 
-                echo '<li class="menu-item"> Hello ' . $_SESSION["username"] .'';
+                echo '<li class="menu-item" style="color:white;"> Hello ' . $_SESSION["username"] .'';
                 echo '<li class="menu-item"><a href="logout.php">Logout</a></li>';
                 } ?>
                 </ul>
