@@ -47,6 +47,7 @@ function register($user, $pass, $email){
     // Chống SQL Injection
     $user = addslashes($user);
     $pass = addslashes($pass);
+    $email = addslashes($email);
   
     // Truy vấn 
     $sql = "
