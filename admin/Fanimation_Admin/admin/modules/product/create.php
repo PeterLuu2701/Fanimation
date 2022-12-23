@@ -32,7 +32,7 @@ include 'list.php';
 $category = mysqli_query($conn, "SELECT * FROM category");
 if(isset($_POST['SKU'])){
     // echo "<pre>";                                    
-    // print_r($_FILES['image']);
+    
     // die();
     $SKU = $_POST['SKU'];
     $Name = $_POST['Name'];
@@ -48,18 +48,51 @@ if(isset($_POST['SKU'])){
     $Motor_Size = $_POST['Motor_Size'];
     $Motor_Type = $_POST['Motor_Type'];
     $Number_of_Blades = $_POST['Number_of_Blades'];
-    $image = $_POST['image'];
+    // $image = $_POST['image']; //
     
-
     if($_FILES['image']['error'] == 0){
         $file = $_FILES['image'];
-        $file_name = $file['SKU'];
+        $file_name = $file['name'];
         move_uploaded_file($file['tmp_name'], '../uploads'.$file_name);
-        $sql = "INSERT INTO products(SKU, Name, Finish, Blade_Span, Bulb_Type, Close_to_Ceiling_Kit, Control_Type, Energy_Star, Collection, Light_Kit_Included, Location_Rating, Motor_Size, Motor_Type, Number_of_Blades, image ) VALUE ('$SKU','$Name','$Blade_Span','$Bulb_Type','$Close_to_Ceiling_Kit','$Control_Type','$Energy_Star','$Collection','$Light_Kit_Included','$Location_Rating','$Motor_Size','$Motor_Type','$Number_of_Blades','$file_name')";
-        $query = mysqli_query($conn,$sql);
+        $sql = "
+        INSERT INTO products(
+            SKU,
+            Name,
+            Finish,
+            Blade_Span,
+            Bulb_Type,
+            Close_to_Ceiling_Kit,
+            Control_Type,
+            Energy_Star,
+            Collection,
+            Light_Kit_Included,
+            Location_Rating,
+            Motor_Size,
+            Motor_Type,
+            Number_of_Blades,
+            image
+        ) 
+        VALUE (
+            '$SKU',
+            '$Name',
+            '$Finish',
+            '$Blade_Span',
+            '$Bulb_Type',
+            '$Close_to_Ceiling_Kit',
+            '$Control_Type',
+            '$Energy_Star',
+            '$Collection',
+            '$Light_Kit_Included',
+            '$Location_Rating',
+            '$Motor_Size',
+            '$Motor_Type',
+            '$Number_of_Blades',
+            '$file_name'
+        )";
+        $query = mysqli_query($conn,$sql); // 
         var_dump($query);
         if($query){
-            header('location: list.php');
+            header('location: ./list.php');
         }
         else{
             echo "Error occured";
@@ -86,7 +119,7 @@ if(isset($_POST['SKU'])){
                             </div>
                             <div class="form-group">
                                 <label for="">Name</label>
-                                <input type="text" class="form-control" id="" placeholder="" name="name"> 
+                                <input type="text" class="form-control" id="" placeholder="" name="Name"> 
                             </div>
                             <!-- TÊN DANH MỤC LẤY THEO ID DANH MỤC
                             <div class="form-group">
