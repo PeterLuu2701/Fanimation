@@ -1,7 +1,7 @@
 <?php
-echo "hhhhh";
+// echo "hhhhh";
 require './BE/Business.php';
-var_dump($_POST);
+// var_dump($_POST);
 
 if(!empty($_POST["register"])){
 	// echo "hhhhh121212";
