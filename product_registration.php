@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 session_start();
 require './BE/Business.php';
@@ -62,6 +60,9 @@ if (!empty($_POST['submit'])){
 
 disconnect_db();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
