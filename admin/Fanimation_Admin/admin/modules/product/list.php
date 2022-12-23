@@ -1,3 +1,7 @@
+<?php
+$products = mysqli_query($conn, "SELECT * FROM products");
+?>
+
 <div class="jumbotron">
     <div class="container">
         <h2>Product List</h2>
@@ -8,7 +12,59 @@
     </div>
 </div>
 
-<table class="table table-hover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Nhập sản phẩm</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a href="add-product.php" class="list-group-item active">Thêm mới sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Danh sách sản phẩm</h3>
+                        </div>
+                            <div class="panel-body">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>SKU</th>
+                                        <th>Name</th>
+                                        <th>Image</th>                                     
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($products as $key => $data) { ?>
+                                        <tr>
+                                            <td><?php echo $key +1 ?></td>
+                                            <td><?php echo $data['SKU'] ?></td>
+                                            <td><?php echo $data['Name'] ?></td>
+                                            <td><img src="../uploads/<?php echo $data['image']?>" alt="" width="50px" ?></td>
+                                            
+                                            <td>
+                                                <a href="edit.php?id=<?php echo $data['id'] ?>" title="" class="btn btn-info">Edit</a>
+                                                <a href="delete.php?idp=<?php echo $data['id'] ?>" title="" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- <table class="table table-hover">
     <thead>
         <tr>
             <th>ID</th>
@@ -40,4 +96,6 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+
